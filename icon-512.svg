@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060e22"/>
+      <stop offset="40%" stop-color="#0e2f82"/>
+      <stop offset="75%" stop-color="#1a56db"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="shineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.20)"/>
+      <stop offset="60%" stop-color="rgba(255,255,255,0.04)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.88)"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="textShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#0a1f5e" flood-opacity="0.6"/>
+    </filter>
+    <clipPath id="roundRect">
+      <rect width="512" height="512" rx="112" ry="112"/>
+    </clipPath>
+  </defs>
+
+  <!-- Base rounded rect -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+
+  <!-- Decorative circles background -->
+  <circle cx="430" cy="85" r="140" fill="rgba(255,255,255,0.05)" clip-path="url(#roundRect)"/>
+  <circle cx="80" cy="430" r="110" fill="rgba(14,47,130,0.30)" clip-path="url(#roundRect)"/>
+  <circle cx="260" cy="260" r="220" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+  <!-- Shine overlay top half -->
+  <rect width="512" height="256" rx="112" fill="url(#shineGrad)" clip-path="url(#roundRect)"/>
+
+  <!-- Gold accent bar top -->
+  <rect x="120" y="62" width="272" height="8" rx="4" fill="url(#goldGrad)" opacity="0.95"/>
+
+  <!-- Inner card / panel -->
+  <rect x="52" y="118" width="408" height="288" rx="24" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+
+  <!-- MCFA lettering -->
+  <text x="256" y="260"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="900"
+    font-size="148"
+    fill="url(#textGrad)"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    letter-spacing="-4"
+    filter="url(#textShadow)">MCFA</text>
+
+  <!-- Subtle horizontal rule -->
+  <rect x="156" y="298" width="200" height="2" rx="1" fill="url(#goldGrad)" opacity="0.7"/>
+
+  <!-- PROJECT subtitle -->
+  <text x="256" y="340"
+    font-family="Arial, Helvetica, sans-serif"
+    font-weight="700"
+    font-size="40"
+    fill="rgba(255,255,255,0.70)"
+    text-anchor="middle"
+    letter-spacing="10">PROJECT</text>
+
+  <!-- Bismillah arabic small -->
+  <text x="256" y="148"
+    font-family="serif"
+    font-size="32"
+    fill="rgba(253,230,138,0.85)"
+    text-anchor="middle"
+    letter-spacing="4">&#x628;&#x650;&#x633;&#x652;&#x645;&#x650; &#x627;&#x644;&#x644;&#x651;&#x647;&#x650;</text>
+
+  <!-- Gold accent bar bottom -->
+  <rect x="120" y="442" width="272" height="6" rx="3" fill="url(#goldGrad)" opacity="0.60"/>
+
+  <!-- Corner accent dots -->
+  <circle cx="108" cy="108" r="5" fill="url(#goldGrad)" opacity="0.5"/>
+  <circle cx="404" cy="108" r="5" fill="url(#goldGrad)" opacity="0.5"/>
+  <circle cx="108" cy="404" r="5" fill="url(#goldGrad)" opacity="0.3"/>
+  <circle cx="404" cy="404" r="5" fill="url(#goldGrad)" opacity="0.3"/>
+</svg>
